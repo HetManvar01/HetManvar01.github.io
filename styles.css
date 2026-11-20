@@ -37,8 +37,8 @@
   --shadow-lg: 0 12px 32px -6px rgba(15, 23, 42, 0.1);
   --shadow-card-hover: 0 16px 36px -8px rgba(37, 99, 235, 0.12);
 
-  /* Typography */
-  --font-serif: 'Playfair Display', Georgia, serif;
+  /* Typography — Clean, High-Tech Modern Sans-Serif for Data & Analytics */
+  --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, monospace;
 
@@ -149,8 +149,13 @@ a {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.78;
+  margin-bottom: 1.25rem;
   text-align: left;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 img {
@@ -273,9 +278,9 @@ h1, h2, h3, h4 {
 .section-subtitle {
   color: var(--text-muted);
   font-size: 1.1rem;
-  max-width: 62ch;
+  max-width: 64ch;
   margin-bottom: 2.75rem;
-  line-height: 1.55;
+  line-height: 1.76;
   text-align: left;
 }
 
@@ -515,13 +520,12 @@ header.site-header {
 }
 
 .hero-bio {
-  font-size: 1.05rem;
-  line-height: 1.5;
+  font-size: 1.08rem;
+  line-height: 1.82;
   color: var(--text-secondary);
-  margin-bottom: 1.8rem;
-  max-width: 58ch;
-  text-align: justify;
-  text-justify: inter-word;
+  margin-bottom: 2rem;
+  max-width: 62ch;
+  text-align: left;
 }
 
 .hero-actions {
@@ -745,12 +749,11 @@ header.site-header {
 }
 
 .about-story p {
-  font-size: 1.04rem;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--text-secondary);
-  margin-bottom: 0;
-  text-align: justify;
-  text-justify: inter-word;
+  margin-bottom: 1.25rem;
+  text-align: left;
 }
 
 .about-story p:last-child {
@@ -932,10 +935,9 @@ header.site-header {
 .project-box-desc {
   font-size: 1.02rem;
   color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  text-align: justify;
-  text-justify: inter-word;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+  text-align: left;
 }
 
 /* Project 1 Unique Layout: Case Study Data Matrix (Swiggy) */
@@ -1278,14 +1280,13 @@ header.site-header {
 }
 
 .exp-bullets-list li {
-  font-size: 0.96rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
   padding-left: 1.3rem;
   position: relative;
-  line-height: 1.5;
-  text-align: justify;
-  text-justify: inter-word;
-  margin-bottom: 0.55rem;
+  line-height: 1.76;
+  text-align: left;
+  margin-bottom: 0.85rem;
 }
 
 .exp-bullets-list li::before {
@@ -1386,9 +1387,10 @@ header.site-header {
 }
 
 .honor-desc {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
-  line-height: 1.55;
+  line-height: 1.74;
+  margin-bottom: 1.1rem;
   text-align: left;
 }
 
@@ -2571,11 +2573,11 @@ a.contact-card-item:hover .contact-card-value {
 }
 
 .carousel-desc {
-  font-size: 0.98rem;
-  line-height: 1.5;
+  font-size: 1.02rem;
+  line-height: 1.82;
   color: var(--text-secondary);
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
+  margin-bottom: 1.4rem;
 }
 
 .carousel-tech-heading {
@@ -2731,10 +2733,10 @@ a.contact-card-item:hover .contact-card-value {
 }
 
 .merit-spotlight-desc {
-  font-size: 0.94rem;
-  line-height: 1.55;
+  font-size: 0.98rem;
+  line-height: 1.78;
   color: var(--text-secondary);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   text-align: left;
 }
 
