@@ -285,78 +285,148 @@ h1, h2, h3, h4 {
 }
 
 /* --------------------------------------------------------------------------
-   Sticky Floating Glass Navigation Pill
+   Top Full-Width Navigation Bar (Hiral-Style Flat Layout in Dark Mode)
    -------------------------------------------------------------------------- */
 header.site-header {
   position: sticky;
-  top: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 900;
-  padding: 0 1.5rem;
-}
-
-.nav-pill {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--bg-glass);
+  padding: 0;
+  background: rgba(10, 17, 34, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  padding: 0.35rem 0.65rem 0.35rem 1.4rem;
-  box-shadow: var(--shadow-md);
-  max-width: 1120px;
-  margin-inline: auto;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6);
   transition: all var(--transition-base);
 }
 
-[data-theme="dark"] .nav-pill {
-  background: rgba(13, 21, 39, 0.88);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 25px rgba(56, 189, 248, 0.16);
+[data-theme="light"] header.site-header {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1360px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0.75rem 2rem;
+  box-sizing: border-box;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 1.28rem;
-  color: var(--text-primary);
+  font-size: 1.25rem;
+  color: #F8FAFC;
   letter-spacing: -0.01em;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.nav-brand span {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .nav-brand span {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.3rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   font-size: 0.88rem;
   font-weight: 500;
-  color: var(--text-muted);
-  padding: 0.38rem 0.72rem;
-  border-radius: var(--radius-full);
+  color: #94A3B8;
+  padding: 0.42rem 0.75rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
   transition: all var(--transition-fast);
   white-space: nowrap;
+}
+
+[data-theme="light"] .nav-links a {
+  color: #64748B;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: #38BDF8;
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(56, 189, 248, 0.1);
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
-/* All Navbar Icon Buttons (GitHub, LinkedIn, Theme Toggle) - Consistent Circular Cyber-Glass Look */
+/* Domain Pill Badge (Replacing the 3 buttons: Download CV, </>, Briefcase) */
+.nav-domain-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 0.38rem 0.85rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-domain-badge .domain-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  display: inline-block;
+}
+
+.nav-domain-badge:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38BDF8;
+  color: #FFFFFF;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .nav-domain-badge {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.35);
+  color: #0284C7;
+}
+
+[data-theme="light"] .nav-domain-badge:hover {
+  background: rgba(2, 132, 199, 0.15);
+  border-color: #0284C7;
+  color: #0369A1;
+}
+
+/* Icon Buttons */
 .btn-icon, .btn-theme {
   display: inline-flex;
   align-items: center;
@@ -364,9 +434,9 @@ header.site-header {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
+  background: rgba(13, 21, 39, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #E2E8F0;
   cursor: pointer;
   transition: all var(--transition-fast);
   padding: 0;
@@ -376,12 +446,11 @@ header.site-header {
   box-sizing: border-box;
 }
 
-[data-theme="dark"] .btn-icon,
-[data-theme="dark"] .btn-theme {
-  background: rgba(13, 21, 39, 0.9);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  color: #E2E8F0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+[data-theme="light"] .btn-icon,
+[data-theme="light"] .btn-theme {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+  color: #334155;
 }
 
 .btn-icon:hover, .btn-theme:hover {
@@ -390,31 +459,6 @@ header.site-header {
   color: #38BDF8;
   transform: translateY(-2px) scale(1.06);
   box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
-}
-
-.nav-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: linear-gradient(135deg, #0284C7 0%, #2563EB 50%, #4F46E5 100%);
-  color: #FFFFFF;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.5rem 1.15rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
-  white-space: nowrap;
-  transition: all var(--transition-fast);
-  flex-shrink: 0;
-}
-
-.nav-cta:hover {
-  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 50%, #2563EB 100%);
-  border-color: #38BDF8;
-  color: #FFFFFF;
-  transform: translateY(-1px);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
 }
 
 .mobile-toggle {
@@ -433,7 +477,7 @@ header.site-header {
 .mobile-drawer {
   display: none;
   position: fixed;
-  top: 5.2rem;
+  top: 4.2rem;
   left: 1.5rem;
   right: 1.5rem;
   background: var(--bg-secondary);
