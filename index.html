@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=hiral-nav-v28">
+  <link rel="stylesheet" href="styles.css?v=hiral-nav-v29">
 </head>
 <body>
   <!-- Scroll Reading Progress Line -->
@@ -45,10 +45,10 @@
 
       <div class="nav-actions">
         <!-- Resume / CV Button -->
-        <button id="nav-cv-btn" class="btn btn-secondary btn-sm nav-cv-btn" type="button" aria-label="View and Download Resume">
+        <a id="nav-cv-btn" href="./assets/Het_Manvar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm nav-cv-btn" aria-label="Open Het Manvar Resume PDF">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           <span>Resume CV</span>
-        </button>
+        </a>
 
         <!-- Theme Toggle -->
         <button id="theme-toggle" class="btn-icon btn-theme" type="button" aria-label="Toggle dark/light theme">
@@ -70,7 +70,7 @@
       <a href="#projects">Projects</a>
       <a href="#trajectory">Education &amp; Experience</a>
       <a href="#contact">Contact</a>
-      <button id="drawer-cv-btn" class="drawer-cv-link" type="button">📄 View / Download Resume</button>
+      <a id="drawer-cv-btn" href="./assets/Het_Manvar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="drawer-cv-link">📄 Open Resume (PDF) ↗</a>
       <a href="https://github.com/HetManvar01" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
       <a href="https://www.linkedin.com/in/het-manvar-47617b278" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
     </div>
@@ -103,10 +103,10 @@
               <span>Explore Projects</span>
               <span>↗</span>
             </a>
-            <button id="hero-cv-btn" class="btn btn-secondary btn-cv-highlight" type="button" aria-label="View and Download Resume">
+            <a id="hero-cv-btn" href="./assets/Het_Manvar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-cv-highlight" aria-label="Open Het Manvar Resume PDF">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
               <span>Download CV</span>
-            </button>
+            </a>
             <a href="#contact" class="btn btn-secondary">
               <span>Contact</span>
               <span>↓</span>
@@ -1132,10 +1132,14 @@
               <span>🌐 hetmanvar.me</span>
             </div>
           </div>
-          <div class="resume-header-actions">
-            <button class="btn btn-primary btn-sm" id="print-resume-btn" type="button">
+          <div class="resume-header-actions" style="display: flex; gap: 0.5rem; align-items: center;">
+            <a href="./assets/Het_Manvar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="view-official-pdf-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>Open PDF ↗</span>
+            </a>
+            <button class="btn btn-secondary btn-sm" id="print-resume-btn" type="button">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-              <span>Print / Save PDF</span>
+              <span>Print</span>
             </button>
           </div>
         </div>
@@ -1275,6 +1279,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=pdf-direct-v1"></script>
 </body>
 </html>

@@ -401,11 +401,6 @@ function initResumeModal() {
   const modal = document.getElementById('resume-modal');
   const closeBtn = document.getElementById('resume-modal-close');
   const printBtn = document.getElementById('print-resume-btn');
-  const triggers = [
-    document.getElementById('nav-cv-btn'),
-    document.getElementById('hero-cv-btn'),
-    document.getElementById('drawer-cv-btn')
-  ].filter(Boolean);
 
   if (!modal) return;
 
@@ -421,7 +416,10 @@ function initResumeModal() {
     document.body.style.overflow = '';
   }
 
-  triggers.forEach(trigger => {
+  // Resume buttons (Nav, Hero, Drawer) now directly link to ./assets/Het_Manvar_Resume.pdf
+  // Allowing direct PDF opening in a new tab without preventing default!
+  const webCvTriggers = document.querySelectorAll('.open-web-cv-btn');
+  webCvTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       openResume();
