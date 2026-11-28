@@ -156,17 +156,32 @@ function initTrajectoryTabs() {
 
   if (!tabBtns.length || !panels.length) return;
 
+  function switchTab(targetId) {
+    tabBtns.forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-panel') === targetId);
+    });
+    panels.forEach(p => {
+      p.classList.toggle('active', p.id === targetId);
+    });
+  }
+
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetId = btn.getAttribute('data-panel');
+      if (targetId) switchTab(targetId);
+    });
+  });
 
-      tabBtns.forEach(b => b.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-
-      btn.classList.add('active');
-      const targetPanel = document.getElementById(targetId);
-      if (targetPanel) {
-        targetPanel.classList.add('active');
+  // Support clicking navbar or drawer links pointing to trajectory sections
+  document.querySelectorAll('a[href="#trajectory"]').forEach(navLink => {
+    navLink.addEventListener('click', () => {
+      const text = navLink.textContent.trim().toLowerCase();
+      if (text.includes('cert')) {
+        switchTab('honors-panel');
+      } else if (text.includes('exp')) {
+        switchTab('exp-panel');
+      } else if (text.includes('edu')) {
+        switchTab('edu-panel');
       }
     });
   });
