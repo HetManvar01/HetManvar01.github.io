@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeaturedCarousel();
   initTrajectoryTabs();
   initCertificateModal();
+  initResumeModal();
   initContactForm();
 });
 
@@ -392,4 +393,61 @@ function switchInsightTab(tab) {
   }
 }
 window.switchInsightTab = switchInsightTab;
+
+/* --------------------------------------------------------------------------
+   8. Resume / CV Interactive Modal
+   -------------------------------------------------------------------------- */
+function initResumeModal() {
+  const modal = document.getElementById('resume-modal');
+  const closeBtn = document.getElementById('resume-modal-close');
+  const printBtn = document.getElementById('print-resume-btn');
+  const triggers = [
+    document.getElementById('nav-cv-btn'),
+    document.getElementById('hero-cv-btn'),
+    document.getElementById('drawer-cv-btn')
+  ].filter(Boolean);
+
+  if (!modal) return;
+
+  function openResume() {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    const drawer = document.getElementById('mobile-drawer');
+    if (drawer) drawer.classList.remove('open');
+  }
+
+  function closeResume() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openResume();
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeResume);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeResume();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeResume();
+    }
+  });
+
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
+}
 

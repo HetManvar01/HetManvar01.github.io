@@ -44,6 +44,11 @@
       </ul>
 
       <div class="nav-actions">
+        <!-- Resume / CV Button -->
+        <button id="nav-cv-btn" class="btn btn-secondary btn-sm nav-cv-btn" type="button" aria-label="View and Download Resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Resume CV</span>
+        </button>
 
         <!-- Theme Toggle -->
         <button id="theme-toggle" class="btn-icon btn-theme" type="button" aria-label="Toggle dark/light theme">
@@ -63,10 +68,9 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#trajectory">Education</a>
-      <a href="#trajectory">Experience</a>
-      <a href="#trajectory">Certifications</a>
+      <a href="#trajectory">Education &amp; Experience</a>
       <a href="#contact">Contact</a>
+      <button id="drawer-cv-btn" class="drawer-cv-link" type="button">📄 View / Download Resume</button>
       <a href="https://github.com/HetManvar01" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
       <a href="https://www.linkedin.com/in/het-manvar-47617b278" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
     </div>
@@ -89,26 +93,50 @@
             Transforming data into<br><span class="highlight-text">actionable intelligence.</span>
           </h1>
 
-          <!-- Hero Bio (Hiral Monpara style signature lead paragraph) -->
-          <p class="hero-bio" style="font-size: 1.05rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: 1.8rem; text-align: justify; text-justify: inter-word;">
-            <strong>I’m Het Manvar</strong>—an aspiring <span style="color: var(--accent-blue); font-weight: 600;">data analytics and business intelligence</span> specialist with hands-on work in <strong>Power BI, Tableau, and Python</strong>, from delivery dashboards to AI-assisted apps. Experienced in stress-testing <strong>3M+ transaction records</strong>, engineering executive <strong>Power BI &amp; Tableau dashboards</strong>, and deploying production-ready <strong>Streamlit intelligence applications</strong>. Using <strong>SQL, Python, and Power BI</strong>, I transform complex datasets into clear visuals, actionable insights, and informed business decisions.
+          <!-- Hero Bio (Crisp, High-Impact, Scannable) -->
+          <p class="hero-bio" style="font-size: 1.08rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.35rem; text-align: left;">
+            <strong>I’m Het Manvar</strong>—a <span style="color: var(--accent-blue); font-weight: 600;">Data Analytics &amp; Business Intelligence Specialist</span> skilled in <strong>Power BI, SQL, Python, and Tableau</strong>. Experienced in modeling <strong>3M+ transaction records</strong>, engineering executive KPI dashboards, and deploying end-to-end analytics applications that drive measurable operational impact.
           </p>
 
-          <div class="hero-actions" style="margin-bottom: 1.2rem;">
+          <div class="hero-actions" style="margin-bottom: 1.4rem;">
             <a href="#projects" class="btn btn-primary">
-              <span>Explore projects</span>
+              <span>Explore Projects</span>
               <span>↗</span>
             </a>
+            <button id="hero-cv-btn" class="btn btn-secondary btn-cv-highlight" type="button" aria-label="View and Download Resume">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>Download CV</span>
+            </button>
             <a href="#contact" class="btn btn-secondary">
-              <span>Get in touch</span>
+              <span>Contact</span>
               <span>↓</span>
             </a>
-            <a href="https://github.com/HetManvar01" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.8rem 1.1rem;">
+            <a href="https://github.com/HetManvar01" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.8rem 1.05rem;" title="GitHub Profile">
               <span>&lt;/&gt; GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/het-manvar-47617b278" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.8rem 1.1rem;">
+            <a href="https://www.linkedin.com/in/het-manvar-47617b278" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.8rem 1.05rem;" title="LinkedIn Profile">
               <span>LinkedIn</span>
             </a>
+          </div>
+
+          <!-- Hero Metrics Bar (Fast Scannability for Recruiters/Faculty) -->
+          <div class="hero-metrics-bar">
+            <div class="metric-chip">
+              <span class="metric-val">3M+</span>
+              <span class="metric-lbl">Rows Modeled</span>
+            </div>
+            <div class="metric-chip">
+              <span class="metric-val">5+</span>
+              <span class="metric-lbl">BI Dashboards</span>
+            </div>
+            <div class="metric-chip">
+              <span class="metric-val">3rd Rank</span>
+              <span class="metric-lbl">CHARUSAT (84.3%)</span>
+            </div>
+            <div class="metric-chip">
+              <span class="metric-val">2</span>
+              <span class="metric-lbl">Corporate Internships</span>
+            </div>
           </div>
 
           <div class="hero-status-pill">
@@ -127,7 +155,7 @@
 
           <!-- Circle Photo Container with Avatar (Huge Centered Glowing Circle) -->
           <div class="hero-circle-frame">
-            <img id="hero-main-avatar" src="./assets/het-portrait-medium-beard.png?v=restored-real" alt="Het Manvar - Data Analyst" class="hero-circle-photo" width="290" height="290">
+            <img id="hero-main-avatar" src="./assets/het-avatar.jpg" alt="Het Manvar - Data Analyst &amp; BI Specialist" class="hero-circle-photo" width="290" height="290">
           </div>
 
           <!-- Floating Glass Badge 1: Python Data Science Logo (SVG Vector) -->
@@ -227,14 +255,31 @@
         <div class="about-grid">
           <div class="about-story">
             <p>
-              I’m <strong>Het Manvar</strong>, a PGDM student specializing in Data Science and Analytics at <strong>Narayana Business School, Ahmedabad</strong>. I hold a Bachelor of Business Administration (BBA) in Business Analytics degree from <strong>CHARUSAT University</strong>, graduating with an 84.3% score and 3rd University Merit Rank.
+              I’m <strong>Het Manvar</strong>, pursuing PGDM in Data Science &amp; Analytics at <strong>Narayana Business School, Ahmedabad</strong>. I graduated with a BBA in Business Analytics from <strong>CHARUSAT University</strong>, securing <strong>3rd University Merit Rank with 84.3%</strong>.
             </p>
             <p>
-              During my internship as a <strong>Data Analyst Intern at Algovista Analytics LLP</strong>, I worked on business dashboards, client reporting, and exploratory data analysis (EDA), complemented by industrial training at <strong>Cadila Pharmaceuticals</strong>. This experience showed me how analytics can streamline workflows, reveal operational insights, and support better business decisions.
+              Through hands-on internships at <strong>Algovista Analytics LLP</strong> and <strong>Cadila Pharmaceuticals</strong>, I bridge business logic with statistical modeling—turning complex multi-million row datasets into clear, actionable executive dashboards.
             </p>
-            <p>
-              My interests include <strong>Data Analytics, Machine Learning, and Business Intelligence</strong>. I enjoy using <strong>SQL, Python, Power BI, and Tableau</strong> to identify patterns and transform complex datasets into clear, actionable insights. Combining statistical rigor, interactive dashboards, and business problem-solving.
-            </p>
+            <div class="about-focus-points">
+              <div class="focus-point-item">
+                <span class="focus-icon">📊</span>
+                <div>
+                  <strong>Enterprise BI &amp; Modeling:</strong> Power BI (DAX, Star Schema) &amp; Tableau executive dashboards.
+                </div>
+              </div>
+              <div class="focus-point-item">
+                <span class="focus-icon">⚡</span>
+                <div>
+                  <strong>Data Engineering &amp; EDA:</strong> Complex SQL queries, ETL automation, and Python (Pandas, NumPy).
+                </div>
+              </div>
+              <div class="focus-point-item">
+                <span class="focus-icon">🎯</span>
+                <div>
+                  <strong>Business Impact:</strong> Automated recurring reports (-20% turnaround) and actionable operational KPIs.
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- 4-Quadrant Capability Grid -->
@@ -655,7 +700,7 @@
           </div>
         </div>
 
-        <!-- Panel 2: Internship Experience (With Certificate Viewer Buttons) -->
+        <!-- Panel 2: Internship Experience (With Certificate Viewer Buttons & Key Learnings) -->
         <div class="trajectory-panel" id="exp-panel">
           <div class="experience-flow">
             <!-- Algovista Analytics -->
@@ -666,19 +711,42 @@
               </div>
               <div class="exp-company-name">Algovista Analytics LLP · Ahmedabad, India</div>
 
+              <!-- Core Project Exposure -->
+              <div class="exp-section-subtitle">PROJECT EXPOSURE &amp; RESPONSIBILITIES:</div>
               <ul class="exp-bullets-list">
-                <li>Worked on data analytics, business dashboards, and visual reporting for client requirements.</li>
-                <li>Engineered interactive Power BI dashboards using AI-assisted dashboard development practices.</li>
-                <li>Conducted exploratory data analysis (EDA) to translate complex records into clear business insights.</li>
-                <li>Collaborated on data quality checks and validation to ensure reporting consistency.</li>
+                <li>Engineered client-facing Power BI dashboards and visual KPI scorecards for executive stakeholders.</li>
+                <li>Conducted exploratory data analysis (EDA) across multi-table retail and operational datasets to detect anomalies.</li>
+                <li>Established automated Power Query ETL pipelines, ensuring data hygiene and consistency across reports.</li>
               </ul>
 
-              <div class="project-tags-group" style="margin: 0 0 1rem 0;">
+              <!-- What Learnings You Get From There (Key Learnings & Takeaways) -->
+              <div class="exp-learnings-box">
+                <div class="exp-learnings-header">
+                  <span class="learning-icon">💡</span>
+                  <span class="learning-title">KEY LEARNINGS &amp; INDUSTRY EXPOSURE:</span>
+                </div>
+                <div class="exp-learnings-grid">
+                  <div class="exp-learning-item">
+                    <strong>Star-Schema Data Modeling:</strong> Architected fact and dimension tables, relationship cardinalities, and prevented bidirectional cross-filtering traps.
+                  </div>
+                  <div class="exp-learning-item">
+                    <strong>Advanced DAX Formulations:</strong> Mastered dynamic measures (`CALCULATE`, `FILTER`, `SAMEPERIODLASTYEAR`) for MoM/YoY trend tracking.
+                  </div>
+                  <div class="exp-learning-item">
+                    <strong>Client Requirement Translation:</strong> Learned to bridge ambiguous business problems into crisp, actionable visual metrics.
+                  </div>
+                  <div class="exp-learning-item">
+                    <strong>Dashboard Optimization:</strong> Reduced visual rendering latency on high-volume tables via DAX query tuning and data type normalization.
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-tags-group" style="margin: 0.8rem 0 1rem 0;">
                 <span class="tech-chip primary">Power BI</span>
-                <span class="tech-chip">Data Visualization</span>
-                <span class="tech-chip">AI-assisted Dashboards</span>
-                <span class="tech-chip">Business Insights</span>
-                <span class="tech-chip">EDA</span>
+                <span class="tech-chip primary">DAX Modeling</span>
+                <span class="tech-chip">Star Schema</span>
+                <span class="tech-chip">ETL Automation</span>
+                <span class="tech-chip">Client Reporting</span>
               </div>
 
               <div class="exp-cert-preview-wrap">
@@ -703,20 +771,59 @@
               </div>
               <div class="exp-company-name">Cadila Pharmaceuticals Limited (Chemicals SBU) · Ankleshwar, Gujarat</div>
 
+              <!-- Core Project Exposure -->
+              <div class="exp-section-subtitle">PROJECT EXPOSURE &amp; RESPONSIBILITIES:</div>
               <ul class="exp-bullets-list">
-                <li>Performed exploratory data analysis across internal pharmaceutical operations and distribution records.</li>
-                <li>Developed interactive operational dashboards in Power BI and Tableau for senior management.</li>
-                <li>Reduced recurring weekly reporting turnaround by 20% through automated data refresh pipelines.</li>
-                <li>Collaborated with cross-functional supply chain teams, improving reporting accuracy by 15%.</li>
+                <li>Analyzed plant-level production batch records, inventory holding cycles, and chemical SBU distribution data.</li>
+                <li>Designed operational and executive review dashboards in Power BI and Tableau for plant leadership.</li>
+                <li>Automated weekly recurring distribution variance reports, cutting turnaround time by 20%.</li>
               </ul>
 
-              <div class="project-tags-group" style="margin: 0 0 1rem 0;">
+              <!-- What Learnings You Get From There (Key Learnings & Takeaways) -->
+              <div class="exp-learnings-box">
+                <div class="exp-learnings-header">
+                  <span class="learning-icon">💡</span>
+                  <span class="learning-title">KEY LEARNINGS &amp; INDUSTRY EXPOSURE:</span>
+                </div>
+                <div class="exp-learnings-grid">
+                  <div class="exp-learning-item">
+                    <strong>Pharma Supply Chain Dynamics:</strong> Learned industrial batch dispatch cycles, safety stock management, and lead-time bottlenecks.
+                  </div>
+                  <div class="exp-learning-item">
+                    <strong>ETL Automation &amp; Speed:</strong> Eliminated manual spreadsheet merges with automated refresh pipelines, saving 4+ hours every week.
+                  </div>
+                  <div class="exp-learning-item">
+                    <strong>Cross-Functional Stakeholder Sync:</strong> Partnered directly with logistics and quality supervisors, improving reporting accuracy by 15%.
+                  </div>
+                  <div class="exp-learning-item">
+                    <strong>Root-Cause Variance Analysis:</strong> Isolated operational distribution delays using Pareto analysis and statistical trend lines.
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-tags-group" style="margin: 0.8rem 0 1rem 0;">
                 <span class="tech-chip primary">Power BI</span>
                 <span class="tech-chip primary">Tableau</span>
-                <span class="tech-chip">EDA</span>
-                <span class="tech-chip">Operational Analytics</span>
+                <span class="tech-chip">Supply Chain Analytics</span>
                 <span class="tech-chip">-20% Turnaround</span>
+                <span class="tech-chip">+15% Accuracy</span>
               </div>
+
+              <div class="exp-cert-preview-wrap">
+                <div class="exp-cert-thumb-box" data-cert="cadila" title="Click to view full certificate">
+                  <img src="./assets/certs/cert-cadila.jpg" alt="Cadila Pharmaceuticals Official Internship Certificate" class="exp-cert-thumb">
+                  <div class="exp-cert-thumb-meta">
+                    <span class="exp-cert-thumb-title">Cadila Industrial Certificate</span>
+                    <span class="exp-cert-thumb-sub">Official HR Seal &amp; Signature ↗</span>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-view-cert" data-cert="cadila" type="button">
+                  <span>View Full Certificate ↗</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
 
               <div class="exp-cert-preview-wrap">
                 <div class="exp-cert-thumb-box" data-cert="cadila" title="Click to view full certificate">
@@ -1020,6 +1127,118 @@
       </div>
     </section>
   </main>
+
+  <!-- =======================================================================
+       INTERACTIVE RESUME / CV VIEWER MODAL
+       ======================================================================= -->
+  <div class="cert-modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="cert-modal-dialog resume-modal-dialog">
+      <button class="cert-modal-close" id="resume-modal-close" type="button" aria-label="Close Resume View">✕</button>
+
+      <div class="resume-sheet">
+        <!-- Resume Header -->
+        <div class="resume-header">
+          <div class="resume-header-main">
+            <h2 class="resume-name" id="resume-modal-title">Het Manvar</h2>
+            <div class="resume-role">Data Analytics &amp; Business Intelligence Specialist</div>
+            <div class="resume-contact-bar">
+              <span>📍 Ahmedabad, India</span>
+              <span>✉️ het.pgdmds25@nbs.edu.in</span>
+              <span>📞 +91 9429940679</span>
+              <span>🌐 hetmanvar.me</span>
+            </div>
+          </div>
+          <div class="resume-header-actions">
+            <button class="btn btn-primary btn-sm" id="print-resume-btn" type="button">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / Save PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="resume-section">
+          <h3 class="resume-sec-title">Executive Summary</h3>
+          <p class="resume-sec-p">
+            Data Analytics &amp; Business Intelligence specialist proficient in <strong>Power BI, SQL, Python, and Tableau</strong>. BBA in Business Analytics graduate (84.3%, 3rd University Merit Rank) and currently pursuing PGDM in Data Science &amp; Analytics. Proven experience in <strong>3M+ transaction analytics</strong>, executive dashboard engineering, and automated ETL workflows (-20% turnaround).
+          </p>
+        </div>
+
+        <!-- Technical Arsenal -->
+        <div class="resume-section">
+          <h3 class="resume-sec-title">Core Technical Competencies</h3>
+          <div class="resume-skills-grid">
+            <div><strong>BI &amp; Visualization:</strong> Power BI (DAX, Star Schema, Power Query), Tableau, Executive Scorecards</div>
+            <div><strong>Languages &amp; DB:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn), SQL (Joins, Aggregations, Indexing)</div>
+            <div><strong>Modern Analytics:</strong> Streamlit Applications, REST APIs, Exploratory Data Analysis (EDA), Statistical Modeling</div>
+          </div>
+        </div>
+
+        <!-- Experience & Internships -->
+        <div class="resume-section">
+          <h3 class="resume-sec-title">Professional Experience</h3>
+          
+          <div class="resume-exp-entry">
+            <div class="resume-entry-header">
+              <div>
+                <strong>Data Analyst Intern</strong> — <em>Algovista Analytics LLP, Ahmedabad</em>
+              </div>
+              <span class="resume-entry-date">May 2026 – July 2026</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Engineered interactive Power BI executive dashboards and KPI scorecards for commercial client engagements.</li>
+              <li>Structured dimensional data models (Star Schema) and engineered dynamic DAX measures for real-time trend tracking.</li>
+              <li>Conducted exploratory data analysis (EDA) and automated data hygiene checks across client databases.</li>
+            </ul>
+          </div>
+
+          <div class="resume-exp-entry">
+            <div class="resume-entry-header">
+              <div>
+                <strong>Industrial Training &amp; Analytics Intern</strong> — <em>Cadila Pharmaceuticals Limited, Ankleshwar</em>
+              </div>
+              <span class="resume-entry-date">May 2024 – June 2024</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Analyzed chemical SBU distribution, inventory turnover, and pharmaceutical manufacturing batch records.</li>
+              <li>Developed Power BI and Tableau operational tracking dashboards used directly by senior plant leadership.</li>
+              <li>Automated weekly recurring distribution variance reports, cutting turnaround time by 20%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="resume-section">
+          <h3 class="resume-sec-title">Key Analytics Projects</h3>
+          <div class="resume-proj-entry">
+            <strong>Swiggy Sales &amp; Operations Dashboard (Power BI):</strong> Stress-tested and analyzed 3M+ food delivery records; identified operational delivery latency bottlenecks and peak order velocities.
+          </div>
+          <div class="resume-proj-entry">
+            <strong>Comparative Social Media Analytics (Tableau):</strong> Analyzed 15K+ engagement records across Meta platforms; uncovered 30%+ higher Reels visibility to formulate organic reach growth strategies.
+          </div>
+          <div class="resume-proj-entry">
+            <strong>Smart Agriculture Analytics (Python EDA):</strong> Evaluated 20+ years of crop output (11.8K rows); modeled decade-wise yield trajectory (+24.3%) and mandi wholesale price elasticity.
+          </div>
+          <div class="resume-proj-entry">
+            <strong>Multilingual Weather Bot &amp; Student Tracker (Streamlit):</strong> Deployed interactive Python applications integrating REST APIs and real-time student engagement tracking (94.6% cohort avg).
+          </div>
+        </div>
+
+        <!-- Education & Honors -->
+        <div class="resume-section">
+          <h3 class="resume-sec-title">Education &amp; Academic Honors</h3>
+          <div class="resume-edu-entry">
+            <div><strong>PGDM — Data Science &amp; Analytics:</strong> Narayana Business School, Ahmedabad (2025 – 2027)</div>
+          </div>
+          <div class="resume-edu-entry">
+            <div><strong>BBA — Business Analytics (84.3%):</strong> Indukaka Ipcowala Institute of Management, CHARUSAT (2022 – 2025)</div>
+            <span class="resume-honor-tag">★ 3rd University Merit Rank Awardee</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- =======================================================================
        INTERACTIVE CERTIFICATE & CREDENTIAL VIEWER MODAL (With Real Document Photo Support)
